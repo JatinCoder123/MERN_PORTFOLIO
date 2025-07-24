@@ -90,7 +90,7 @@ export const getAllProjects = () => {
     dispatch(projectSlice.actions.getAllProjectsRequest());
     try {
       const { data } = await axios.get(
-        " http://localhost:4000/api/v1/project/getall",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/project/getall",
         {
           withCredentials: true,
         }
@@ -109,7 +109,7 @@ export const deleteProject = (id) => {
     dispatch(projectSlice.actions.deleteProjectRequest());
     try {
       const { data } = await axios.delete(
-        ` http://localhost:4000/api/v1/project/delete/${id}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/project/delete/${id}`,
         {
           withCredentials: true,
         }
@@ -128,7 +128,7 @@ export const updateProject = (id, newData) => {
     dispatch(projectSlice.actions.updateProjectRequest());
     try {
       const { data } = await axios.put(
-        ` http://localhost:4000/api/v1/project/update/${id}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/project/update/${id}`,
         newData,
         {
           withCredentials: true,
@@ -149,7 +149,7 @@ export const addProject = (projectData) => {
     dispatch(projectSlice.actions.addProjectRequest());
     try {
       const { data } = await axios.post(
-        ` http://localhost:4000/api/v1/project/add/`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/project/add/`,
         projectData,
         {
           withCredentials: true,

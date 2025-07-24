@@ -23,7 +23,7 @@ const ProjectView = () => {
   useEffect(() => {
     const getProject = async () => {
       await axios
-        .get(` http://localhost:4000/api/v1/project/get/${id}`, {
+        .get(`  https://mern-portfolio-fawn.vercel.app/api/v1/project/get/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

@@ -16,7 +16,7 @@ const Contact = () => {
     setLoading(true);
     await axios
       .post(
-        " http://localhost:4000/api/v1/message/send",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/message/send",
         { senderName, email, subject, message },
         {
           withCredentials: true,

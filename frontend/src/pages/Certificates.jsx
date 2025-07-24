@@ -9,7 +9,7 @@ const Certificates = () => {
   useEffect(() => {
     const getMyCertificates = async () => {
       const { data } = await axios.get(
-        " http://localhost:4000/api/v1/certificate/getall",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/certificate/getall",
         { withCredentials: true }
       );
       setCertificates(data.certificates);

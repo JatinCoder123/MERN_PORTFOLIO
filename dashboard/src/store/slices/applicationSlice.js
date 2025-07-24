@@ -74,7 +74,7 @@ export const getAllApplication = () => {
     dispatch(applicationSlice.actions.getAllApplicationRequest());
     try {
       const { data } = await axios.get(
-        " http://localhost:4000/api/v1/softwareApplication/getall",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/softwareApplication/getall",
         {
           withCredentials: true,
         }
@@ -93,7 +93,7 @@ export const deleteApplication = (id) => {
     dispatch(applicationSlice.actions.deleteApplicationRequest());
     try {
       const { data } = await axios.delete(
-        ` http://localhost:4000/api/v1/softwareApplication/delete/${id}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/softwareApplication/delete/${id}`,
         {
           withCredentials: true,
         }
@@ -112,7 +112,7 @@ export const addApplication = (applicationData) => {
     dispatch(applicationSlice.actions.addApplicationRequest());
     try {
       const { data } = await axios.post(
-        ` http://localhost:4000/api/v1/softwareApplication/add/`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/softwareApplication/add/`,
         applicationData,
         {
           withCredentials: true,

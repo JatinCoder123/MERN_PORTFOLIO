@@ -73,7 +73,7 @@ export const getAllCertificate = () => {
     dispatch(certificateSlice.actions.getAllCertificateRequest());
     try {
       const { data } = await axios.get(
-        " http://localhost:4000/api/v1/certificate/getall",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/certificate/getall",
         {
           withCredentials: true,
         }
@@ -98,7 +98,7 @@ export const deleteCertificate = (id) => {
     dispatch(certificateSlice.actions.deleteCertificateRequest());
     try {
       const { data } = await axios.delete(
-        ` http://localhost:4000/api/v1/certificate/delete/${id}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/certificate/delete/${id}`,
         {
           withCredentials: true,
         }
@@ -119,7 +119,7 @@ export const addCertificate = (certificateData) => {
     dispatch(certificateSlice.actions.addCertificateRequest());
     try {
       const { data } = await axios.post(
-        ` http://localhost:4000/api/v1/certificate/add`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/certificate/add`,
         certificateData,
         {
           withCredentials: true,

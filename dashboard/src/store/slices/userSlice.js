@@ -115,7 +115,7 @@ export const login = (email, password) => {
     dispatch(userSlice.actions.loginRequest());
     try {
       const { data } = await axios.post(
-        " http://localhost:4000/api/v1/user/login",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/user/login",
         { email, password },
         {
           withCredentials: true,
@@ -133,7 +133,7 @@ export const getUser = () => {
   return async (dispatch) => {
     dispatch(userSlice.actions.loadUserRequest());
     try {
-      const { data } = await axios.get(" http://localhost:4000/api/v1/user/me", {
+      const { data } = await axios.get("  https://mern-portfolio-fawn.vercel.app/api/v1/user/me", {
         withCredentials: true,
       });
       dispatch(userSlice.actions.loadUserSuccess(data.user));
@@ -147,7 +147,7 @@ export const logout = () => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(
-        " http://localhost:4000/api/v1/user/logout",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/user/logout",
         {
           withCredentials: true,
         }
@@ -168,7 +168,7 @@ export const updatePassword = (
     dispatch(userSlice.actions.updateUserPasswordRequest());
     try {
       const { data } = await axios.put(
-        " http://localhost:4000/api/v1/user/update/password",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/user/update/password",
         { currentPassword, newPassword, confirmPassword },
         {
           withCredentials: true,
@@ -189,7 +189,7 @@ export const updateProfile = (newData) => {
     dispatch(userSlice.actions.updateUserProfileRequest());
     try {
       const { data } = await axios.put(
-        " http://localhost:4000/api/v1/user/update/me",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/user/update/me",
         newData,
         {
           withCredentials: true,

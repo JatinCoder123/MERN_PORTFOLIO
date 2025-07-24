@@ -74,7 +74,7 @@ export const getAllTimeline = () => {
     dispatch(timelineSlice.actions.getAllTimelineRequest());
     try {
       const { data } = await axios.get(
-        " http://localhost:4000/api/v1/timeline/getall",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/timeline/getall",
         {
           withCredentials: true,
         }
@@ -93,7 +93,7 @@ export const deleteTimeline = (id) => {
     dispatch(timelineSlice.actions.deleteTimelineRequest());
     try {
       const { data } = await axios.delete(
-        ` http://localhost:4000/api/v1/timeline/delete/${id}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/timeline/delete/${id}`,
         {
           withCredentials: true,
         }
@@ -112,7 +112,7 @@ export const addTimeline = (timelineData) => {
     dispatch(timelineSlice.actions.addTimelineRequest());
     try {
       const { data } = await axios.post(
-        ` http://localhost:4000/api/v1/timeline/add/`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/timeline/add/`,
         timelineData,
         {
           withCredentials: true,

@@ -51,7 +51,7 @@ export const forgotPass = (email) => {
     dispatch(forgotPassSlice.actions.forgotPasswordRequest());
     try {
       const { data } = await axios.post(
-        " http://localhost:4000/api/v1/user/password/forgot",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/user/password/forgot",
         { email },
         {
           withCredentials: true,
@@ -74,7 +74,7 @@ export const resetPass = (token, newPassword, confirmPassword) => {
     dispatch(forgotPassSlice.actions.resetPasswordRequest());
     try {
       const { data } = await axios.put(
-        ` http://localhost:4000/api/v1/user/password/reset/${token}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/user/password/reset/${token}`,
         { newPassword, confirmPassword },
         {
           withCredentials: true,

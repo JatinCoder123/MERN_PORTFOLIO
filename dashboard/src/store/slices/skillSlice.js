@@ -89,7 +89,7 @@ export const getAllSkills = () => {
     dispatch(skillsSlice.actions.getAllSkillsRequest());
     try {
       const { data } = await axios.get(
-        " http://localhost:4000/api/v1/skill/getall",
+        "  https://mern-portfolio-fawn.vercel.app/api/v1/skill/getall",
         {
           withCredentials: true,
         }
@@ -108,7 +108,7 @@ export const deleteSkill = (id) => {
     dispatch(skillsSlice.actions.deleteSkillsRequest());
     try {
       const { data } = await axios.delete(
-        ` http://localhost:4000/api/v1/skill/delete/${id}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/skill/delete/${id}`,
         {
           withCredentials: true,
         }
@@ -127,7 +127,7 @@ export const updateSkill = (id, proficiency) => {
     dispatch(skillsSlice.actions.updateSkillsRequest());
     try {
       const { data } = await axios.put(
-        ` http://localhost:4000/api/v1/skill/update/${id}`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/skill/update/${id}`,
         {proficiency},
         {
           withCredentials: true,
@@ -148,7 +148,7 @@ export const addSkill = (skillData) => {
     dispatch(skillsSlice.actions.addSkillsRequest());
     try {
       const { data } = await axios.post(
-        ` http://localhost:4000/api/v1/skill/add/`,
+        `  https://mern-portfolio-fawn.vercel.app/api/v1/skill/add/`,
         skillData,
         {
           withCredentials: true,
